@@ -12,9 +12,26 @@ recognition.lang = 'en-US';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-document.querySelector('button').addEventListener('click', () => {
-  recognition.start();
+$("#question").on("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        let text = $('#question').val();
+        $('#dialogue').append("<p>You said: <em class=\"output-you\">...</em>"+text+"</p>");
+        socket.emit('chat message', text);
+        $('#question').val('');
+    }
 });
+
+$('#ask').on('click', function(e){
+  let text = $('#question').val();
+  $('#dialogue').append("<p>You said: <em class=\"output-you\">...</em>"+text+"</p>");
+  socket.emit('chat message', text);
+  $('#question').val('');
+});
+
+// document.getElementById('mic').addEventListener('click', () => {
+//   recognition.start();
+// });
 
 recognition.addEventListener('speechstart', () => {
   console.log('Speech has been detected.');
@@ -48,8 +65,10 @@ function synthVoice(text) {
 }
 
 socket.on('bot reply', function(replyText) {
-  synthVoice(replyText);
+  // synthVoice(replyText);
 
   if(replyText == '') replyText = '(No answer...)';
-  outputBot.textContent = replyText;
+  //outputBot.textContent = replyText;
+  $('#dialogue').append("<p>Bot replied: <em class=\"output-you\">...</em>"+replyText+"</p>");
+
 });

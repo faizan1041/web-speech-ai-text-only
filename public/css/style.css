@@ -43,7 +43,7 @@ section {
   margin: 1.5em auto;
   width: 400px;
 }
-button {
+button#mic {
   display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -61,19 +61,19 @@ button {
   will-change: transform, filter;
   transition: all 0.3s ease-out;
 }
-button .fa {
+button#mic .fa {
   font-size: 130px;
   line-height: 200px;
   margin: 0;
   text-shadow: 1px 2px 2px #2a8b90;
 }
-button:hover {
+button#mic:hover {
   transform: scale(.92);
 }
-button:active {
+button#mic:active {
   filter: brightness(.8);
 }
-button:focus {
+button#mic:focus {
   outline: 0;
 }
 
@@ -88,4 +88,34 @@ button:focus {
 }
 .fa-github::before {
     content: "\f09b";
+}
+
+div#dialogue {
+    margin-top: 15px;
+    width: 100%;
+    height: 215px;
+    background: white;
+    opacity: 0.8;
+    border: 1px black solid;
+    overflow-y: scroll;
+    padding: 0 13px;
+}
+
+textarea#question {
+    width: 100%;
+    height: 38px;
+    font-size: 22px;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: none;
+}
+
+button#ask {
+    width: 100%;
+    height: 33px;
+    background: linear-gradient(180deg, #39C2C9 0%, #3FC8C9 80%, #3FC8C9 100%);
+    color: white;
+    border: 1px solid black;
 }
