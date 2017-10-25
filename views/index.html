@@ -10,31 +10,36 @@
     <title>Bot Demo</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <section>
+    <div class="wrapper">
       <h1>Bot Demo</h1>
       <!-- <h2>with Web Speech API</h2> -->
+      <div class="row">
+        <div class="col-sm-12 frame" >
+              <ul id="dialogue"></ul>
+              <div>
+                  <div class="msj-rta macro" style="margin:auto">
+                    <div class="text text-r" style="background:whitesmoke !important">
+                      <input id="question" class="mytext" placeholder="Type a message"/>
+                    </div>
 
-    <div id="wrapper">
-        <div id="dialogue">
-            <!-- <p>You said: <em class="output-you">...</em></p>
-            <p>Bot replied: <em class="output-bot">...</em></p> -->
-        </div>
+                  </div>
 
-        <!-- <button id="mic"><i class="fa fa-microphone"></i></button> -->
-        <!-- <form action="#" onsubmit="askQuestion"> -->
-          <textarea id="question"> </textarea>
-          <button id="ask">Submit</button>
-        <!-- </form> -->
+              </div>
+          </div>
+      </div>
+
+
     </div>
 
-    </section>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
