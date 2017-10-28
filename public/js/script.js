@@ -30,6 +30,7 @@ $("#question").on("keyup", function(event) {
                           '</li>';
         $('#dialogue').append(control);
         socket.emit('chat message', text);
+        $("#dialogue").animate({ scrollTop: $('#dialogue').prop("scrollHeight")}, 1000);
         $('#question').val('');
     }
 });
