@@ -129,12 +129,14 @@ h1 {
     margin-left: 6% !important;
 }
 
+
 ul {
     width: 100%;
     list-style-type: none;
     padding: 18px;
     position: relative;
-    bottom: 10%;
+    bottom: 10% !important;
     display: flex;
     flex-direction: column;
+    top: 0;
 }
