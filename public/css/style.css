@@ -51,15 +51,7 @@
     width: 100%;
     display: flex;
 }
-ul {
-    width: 100%;
-    list-style-type: none;
-    padding: 18px;
-    position: absolute;
-    bottom: 60px;
-    display: flex;
-    flex-direction: column;
-}
+
 .msj:before{
     width: 0;
     height: 0;
