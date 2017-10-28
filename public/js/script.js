@@ -5,8 +5,8 @@ var socket = io();
 var outputYou = document.querySelector('.output-you');
 var outputBot = document.querySelector('.output-bot');
 
-var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-var recognition = new SpeechRecognition();
+// var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// var recognition = new SpeechRecognition();
 
 recognition.lang = 'en-US';
 recognition.interimResults = false;
@@ -45,36 +45,36 @@ $('#ask').on('click', function(e){
 //   recognition.start();
 // });
 
-recognition.addEventListener('speechstart', function() {
-  console.log('Speech has been detected.');
-});
+// recognition.addEventListener('speechstart', function() {
+//   console.log('Speech has been detected.');
+// });
 
-recognition.addEventListener('result', (e) => {
-  console.log('Result has been detected.');
+// recognition.addEventListener('result', (e) => {
+//   console.log('Result has been detected.');
 
-  var last = e.results.length - 1;
-  var text = e.results[last][0].transcript;
+//   var last = e.results.length - 1;
+//   var text = e.results[last][0].transcript;
 
-  outputYou.textContent = text;
-  console.log('Confidence: ' + e.results[0][0].confidence);
+//   outputYou.textContent = text;
+//   console.log('Confidence: ' + e.results[0][0].confidence);
 
-  socket.emit('chat message', text);
-});
+//   socket.emit('chat message', text);
+// });
 
-recognition.addEventListener('speechend', function() {
-  recognition.stop();
-});
+// recognition.addEventListener('speechend', function() {
+//   recognition.stop();
+// });
 
-recognition.addEventListener('error', (e) => {
-  outputBot.textContent = 'Error: ' + e.error;
-});
+// recognition.addEventListener('error', (e) => {
+//   outputBot.textContent = 'Error: ' + e.error;
+// });
 
-function synthVoice(text) {
-  var synth = window.speechSynthesis;
-  var utterance = new SpeechSynthesisUtterance();
-  utterance.text = text;
-  synth.speak(utterance);
-}
+// function synthVoice(text) {
+//   var synth = window.speechSynthesis;
+//   var utterance = new SpeechSynthesisUtterance();
+//   utterance.text = text;
+//   synth.speak(utterance);
+// }
 
 socket.on('bot reply', function(replyText) {
   // synthVoice(replyText);
