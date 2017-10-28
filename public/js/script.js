@@ -8,9 +8,9 @@ var outputBot = document.querySelector('.output-bot');
 // var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 // var recognition = new SpeechRecognition();
 
-recognition.lang = 'en-US';
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+// recognition.lang = 'en-US';
+// recognition.interimResults = false;
+// recognition.maxAlternatives = 1;
 
 $("#question").on("keyup", function(event) {
     event.preventDefault();
