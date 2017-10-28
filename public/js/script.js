@@ -14,6 +14,7 @@ recognition.maxAlternatives = 1;
 
 $("#question").on("keyup", function(event) {
     event.preventDefault();
+    console.log(event.keyCode);
     if (event.keyCode === 13) {
         var text = $('#question').val();
         var date = formatAMPM(new Date());
