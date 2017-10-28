@@ -127,3 +127,22 @@ h1 {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }*/
+
+
+
+#questiondiv {
+    position: fixed;
+    top: 80%;
+    width: 350px;
+    margin-left: 6% !important;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 18px;
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
