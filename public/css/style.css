@@ -42,7 +42,7 @@
     width: 100%;
 }
 .frame > div:last-of-type{
-    width:100%; float: left; display: flex; position: fixed; bottom: 0;
+    width:100%; float: left; display: flex; 
 }
 ul {
     width:100%;
