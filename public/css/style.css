@@ -1,4 +1,4 @@
-.mytext{
+    .mytext{
     border:0;padding:10px;background:whitesmoke;
 }
 .text{
@@ -12,7 +12,7 @@
 }
 .text-l{
     float:left;padding-right:10px;
-}
+}        
 .text-r{
     float:right;padding-left:10px;
 }
@@ -33,25 +33,27 @@
 .msj{
     float:left;background:white;
 }
-.frame {
-    background: #e0e0de;
-    height: 80vh;
-    overflow-y: scroll;
-    padding: 0;
-    position: relative;
-    max-width: 500px;
-    float: none;
-    margin: 0 auto;
-    overflow-x: hidden;
-}
-
-.frame > div:last-of-type {
-    position: absolute;
-    bottom: 20px;
+.frame{
+    background:#e0e0de;
+    height:93vh;
+    overflow:hidden;
+    padding:0;
+    float: left;
     width: 100%;
-    display: flex;
 }
+.frame > div:last-of-type{
+    width:100%; float: left; display: flex; position: fixed; bottom: 0;
+}
+ul {
+    width:100%;
+    list-style-type: none;
+    padding:18px;
+    float: left;    
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 5px;    
 
+}
 .msj:before{
     width: 0;
     height: 0;
@@ -61,7 +63,7 @@
     position:relative;
     border-style: solid;
     border-width: 0 13px 13px 0;
-    border-color: transparent #ffffff transparent transparent;
+    border-color: transparent #ffffff transparent transparent;            
 }
 .msj-rta:after{
     width: 0;
@@ -72,11 +74,11 @@
     position:relative;
     border-style: solid;
     border-width: 13px 13px 0 0;
-    border-color: whitesmoke transparent transparent transparent;
-}
+    border-color: whitesmoke transparent transparent transparent;           
+}  
 input:focus{
     outline: none;
-}
+}        
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #d4d4d4;
 }
@@ -88,55 +90,4 @@ input:focus{
 }
 :-moz-placeholder { /* Firefox 18- */
     color: #d4d4d4;
-}
-
-
-/*.wrapper {
-    max-width: 500px;
-    margin: 0 auto;
-    height: 600px;
-}*/
-
-body {
-  /* background: black; */
-}
-
-h1 {
-    /*color: white;*/
-    width: 14%;
-    margin: 14px auto;
-}
-
-/*.frame::-webkit-scrollbar {
-    width: 1em;
-}
-
-.frame::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-.frame::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}*/
-
-
-
-#questiondiv {
-    position: fixed;
-    bottom: 0;
-    width: 350px;
-    margin-left: 6% !important;
-}
-
-
-ul {
-    width: 100%;
-    list-style-type: none;
-    padding: 18px;
-    position: relative;
-    margin-bottom: 75px !important;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-}
+}   
