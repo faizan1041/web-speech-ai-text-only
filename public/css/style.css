@@ -124,7 +124,7 @@ h1 {
 
 #questiondiv {
     position: fixed;
-    top: 80%;
+    bottom: 0;
     width: 350px;
     margin-left: 6% !important;
 }
