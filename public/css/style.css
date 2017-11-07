@@ -120,3 +120,8 @@ ul#dialogue {
     overflow-y: scroll;
     height: 76vh;
 }
+.wrapper {
+    background: black;
+    color: white;
+    text-align: center;
+}
