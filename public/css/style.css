@@ -147,3 +147,15 @@ body {
 #ask i.fa.fa-paper-plane {
     transform: rotate(35deg);
 }
+
+@media screen and (min-width:600px) {
+    ul#dialogue {
+        overflow-y: scroll;
+        height: 72vh;
+        display: block;
+        position: absolute;
+        width: 87%;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+}
