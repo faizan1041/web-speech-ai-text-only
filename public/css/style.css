@@ -94,9 +94,29 @@ input:focus{
 
 
 div#questiondiv {
-    margin-top: 75vh;
+    margin-top: 80vh;
     margin-left: auto;
     margin-right: auto;
     float: none;
     width: 80%;
+}
+
+
+input#question {
+    width: 70%;
+    border: none;
+    padding: 10px 30px;
+}
+
+#questiondiv button.btn.btn-default {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    margin-left: 5px;
+}
+
+ul#dialogue {
+    overflow-y: scroll;
+    height: 76vh;
 }
