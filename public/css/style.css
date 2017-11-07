@@ -103,7 +103,7 @@ div#questiondiv {
 
 
 input#question {
-    width: 70%;
+    width: 87%;
     border: none;
     padding: 10px 30px;
 }
@@ -120,8 +120,30 @@ ul#dialogue {
     overflow-y: scroll;
     height: 76vh;
 }
-.wrapper {
+.wrapper h1{
     background: black;
     color: white;
     text-align: center;
+}
+
+.frame {
+    background: #e0e0de;
+    height: 91vh;
+    overflow: hidden;
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+
+#dialogue li {
+    float: none;
+    margin: 0 auto;
+}
+
+body {
+    background: black;
+}
+
+#ask i.fa.fa-paper-plane {
+    transform: rotate(45deg);
 }

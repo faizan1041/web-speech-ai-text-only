@@ -55,6 +55,7 @@ $('#ask').on('click', function(event){
         socket.emit('chat message', text);
         $("#dialogue").animate({ scrollTop: $(".frame")[0].scrollHeight}, 1000);
         $('#question').val('');
+    }
 });
 
 // document.getElementById('mic').addEventListener('click', function() {
