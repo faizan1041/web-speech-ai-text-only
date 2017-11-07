@@ -90,4 +90,13 @@ input:focus{
 }
 :-moz-placeholder { /* Firefox 18- */
     color: #d4d4d4;
-}   
+}  
+
+
+div#questiondiv {
+    margin-top: 75vh;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 80%;
+}
