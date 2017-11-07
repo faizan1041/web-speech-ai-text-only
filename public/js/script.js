@@ -35,11 +35,26 @@ $("#question").on("keyup", function(event) {
     }
 });
 
-$('#ask').on('click', function(e){
-  var text = $('#question').val();
-  $('#dialogue').append("<p>You said: <em class=\"output-you\">...</em>"+text+"</p>");
-  socket.emit('chat message', text);
-  $('#question').val('');
+$('#ask').on('click', function(event){
+    event.preventDefault();
+    console.log(event.keyCode);
+    if (event.keyCode === 13) {
+        var text = $('#question').val();
+        var date = formatAMPM(new Date());
+        var avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
+        var control = '<li style="width:70%">' +
+                              '<div class="msj macro">' +
+                              '<div class="avatar"><img class="img-circle" style="width:48px;" src="'+ avatar +'" /></div>' +
+                                  '<div class="text text-l">' +
+                                      '<p>'+ text +'</p>' +
+                                      '<p><small>'+date+'</small></p>' +
+                                  '</div>' +
+                              '</div>' +
+                          '</li>';
+        $('#dialogue').append(control);
+        socket.emit('chat message', text);
+        $("#dialogue").animate({ scrollTop: $(".frame")[0].scrollHeight}, 1000);
+        $('#question').val('');
 });
 
 // document.getElementById('mic').addEventListener('click', function() {
